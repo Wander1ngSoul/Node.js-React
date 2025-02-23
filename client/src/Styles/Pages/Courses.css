@@ -1,0 +1,173 @@
+<<<<<<< HEAD
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+=======
+/* Основные стили для страницы */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота равна высоте видимой области */
+}
+
+.content-wrap {
+    flex: 1; /* Растягиваем контент на всю доступную высоту */
+}
+
+/* Стили для футера */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+<<<<<<< HEAD
+.search-form {
+    width: 100%;
+    position: relative;
+    margin-top: 1.1%;
+}
+
+=======
+/* Стили для строки поиска */
+.search-form {
+    width: 100%; /* Занимает всю доступную ширину */
+}
+
+/* Стили для иконки поиска */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+<<<<<<< HEAD
+    pointer-events: none;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+=======
+    pointer-events: none; /* Чтобы иконка не мешала вводу текста */
+}
+
+/* Стили для кнопки "Создать курс" */
+.create-course-btn {
+    margin-left: 10px; /* Отступ слева от кнопки */
+
+}
+/* Адаптивность */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+@media (max-width: 768px) {
+    .header {
+        height: 300px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .article-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .topic-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .quotes-section h2 {
+        font-size: 1.5rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+    }
+
+    cite {
+        font-size: 0.8rem;
+    }
+
+    .about-us-content {
+        flex-direction: column;
+    }
+
+    .about-us-text {
+        width: 100%;
+    }
+
+    .about-us-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-link {
+        margin: 5px 0;
+    }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910

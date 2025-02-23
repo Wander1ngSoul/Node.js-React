@@ -1,0 +1,104 @@
+<<<<<<< HEAD
+=======
+/* Стили для контейнера новостей */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.news-container {
+    padding: 20px;
+}
+
+.news-title {
+    text-align: center;
+<<<<<<< HEAD
+    margin-bottom: 1.5%;
+=======
+    margin-bottom: 30px;
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.news-block {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+<<<<<<< HEAD
+    padding: 2%;
+=======
+    padding: 20px;
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.news-block:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.news-item-content {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-item-footer {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+<<<<<<< HEAD
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-link {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+=======
+/* Стили для кнопки "Назад" */
+.back-button {
+    margin-bottom: 20px;
+}
+
+/* Стили для кнопок администратора */
+.admin-buttons {
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+}

@@ -1,0 +1,116 @@
+/* Стили для карточки */
+.course-card {
+    width: 18rem;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border: none;
+    background-color: #f8f9fa; /* Светлый фон карточки */
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для заголовка карточки */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* Темно-серый цвет текста */
+}
+
+/* Стили для описания курса */
+.card-description {
+    font-size: 0.9rem;
+    color: #555; /* Серый цвет текста */
+    margin-bottom: 15px;
+}
+
+/* Стили для текста цены */
+.price-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff; /* Синий цвет текста */
+}
+
+/* Стили для контейнера кнопок */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Расстояние между кнопками */
+    margin-top: 15px;
+}
+
+/* Общие стили для всех кнопок */
+.Btn-Pay,
+.Btn-AddToCart,
+.Btn-RemoveFromCart,
+.Btn-Edit,
+.Btn-Delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    flex: 1; /* Равномерное распределение ширины */
+}
+
+/* Стили для кнопки "Купить" */
+.Btn-Pay {
+    background-color: #007bff; /* Синий цвет */
+    color: white;
+}
+
+.Btn-Pay:hover {
+    background-color: #0056b3; /* Темно-синий при наведении */
+}
+
+/* Стили для кнопки "Добавить в корзину" */
+.Btn-AddToCart {
+    background-color: #28a745; /* Зеленый цвет */
+    color: white;
+}
+
+.Btn-AddToCart:hover {
+    background-color: #218838; /* Темно-зеленый при наведении */
+}
+
+/* Стили для кнопки "Удалить из корзины" */
+.Btn-RemoveFromCart {
+    background-color: #dc3545; /* Красный цвет */
+    color: white;
+}
+
+.Btn-RemoveFromCart:hover {
+    background-color: #c82333; /* Темно-красный при наведении */
+}
+
+/* Стили для кнопки "Изменить курс" */
+.Btn-Edit {
+    background-color: #ffc107; /* Желтый цвет */
+    color: black;
+}
+
+.Btn-Edit:hover {
+    background-color: #e0a800; /* Темно-желтый при наведении */
+}
+
+/* Стили для кнопки "Удалить курс" */
+.Btn-Delete {
+    background-color: #dc3545; /* Красный цвет */
+    color: white;
+}
+
+.Btn-Delete:hover {
+    background-color: #c82333; /* Темно-красный при наведении */
+}

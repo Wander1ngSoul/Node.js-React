@@ -1,0 +1,32 @@
+/* Стили для строки поиска и кнопки "Назад" */
+.search-form {
+    margin-bottom: 0; /* Убираем отступ снизу */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 0; /* Убираем отступ снизу */
+}
+
+/* Уменьшенное поле ввода */
+.small-search-input {
+    padding: 6px 30px 6px 12px; /* Уменьшаем отступы */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+    height: 34px; /* Уменьшаем высоту */
+    border-radius: 17px; /* Подгоняем радиус под новую высоту */
+}
+
+/* Уменьшенная иконка поиска */
+.small-search-icon {
+    font-size: 14px; /* Уменьшаем размер иконки */
+    right: 10px; /* Подгоняем положение */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    cursor: pointer;
+}
+
+/* Дополнительные стили для кнопки "Назад" */
+.back-button {
+    margin-right: 10px; /* Отступ между кнопкой и поиском */
+}

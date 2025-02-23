@@ -1,0 +1,343 @@
+<<<<<<< HEAD
+=======
+/* Основные стили контейнера */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.discussions-container {
+    padding: 20px;
+}
+
+<<<<<<< HEAD
+.discussions-title {
+    text-align: center;
+    margin-top: -2.5%;
+=======
+/* Заголовок страницы */
+.discussions-title {
+    text-align: center;
+    margin-bottom: 30px;
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+    font-size: 2.5rem;
+    color: #333;
+}
+
+<<<<<<< HEAD
+=======
+/* Блок обсуждения */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.discussion-block {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.discussion-block:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+<<<<<<< HEAD
+=======
+/* Элемент обсуждения */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.discussion-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.discussion-item-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.discussion-item-content {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.discussion-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+<<<<<<< HEAD
+=======
+/* Стили для кнопки "Назад" */
+.back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Сообщение об отсутствии обсуждений */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.no-discussions {
+    text-align: center;
+    color: #777;
+    font-size: 1.2em;
+}
+
+<<<<<<< HEAD
+=======
+/* Сообщение о загрузке */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.loading {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+<<<<<<< HEAD
+=======
+/* Сообщение об ошибке */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+.error {
+    text-align: center;
+    color: #ff0000;
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+<<<<<<< HEAD
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.discussion-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: auto;
+    max-width: 150px;
+    white-space: nowrap;
+}
+
+.discussion-button:hover {
+    background-color: darkgreen;
+=======
+/* Контейнер для кнопок */
+.buttons-container {
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.discussion-button {
+    background-color: green; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none; /* Убираем рамку */
+    padding: 6px 12px; /* Уменьшенные отступы */
+    border-radius: 4px; /* Скругленные углы */
+    cursor: pointer;
+    font-size: 12px; /* Уменьшенный размер шрифта */
+    font-weight: 500; /* Полужирный текст */
+    transition: all 0.3s ease; /* Плавные переходы */
+    display: inline-flex; /* Для центрирования содержимого */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 6px; /* Уменьшенное расстояние между иконкой и текстом */
+    width: auto; /* Автоматическая ширина */
+    max-width: 150px; /* Максимальная ширина */
+    white-space: nowrap; /* Текст в одну строку */
+}
+
+.discussion-button:hover {
+    background-color: darkgreen; /* Темно-зеленый фон при наведении */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+}
+
+.edit-button,
+.delete-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.edit-button {
+<<<<<<< HEAD
+    background-color: #007bff;
+=======
+    background-color: #007bff; /* Зеленый цвет для редактирования */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+    color: white;
+}
+
+.edit-button:hover {
+<<<<<<< HEAD
+    background-color: #218838;
+}
+
+.delete-button {
+    background-color: #dc3545;
+=======
+    background-color: #218838; /* Темно-зеленый при наведении */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Красный цвет для удаления */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+    color: white;
+}
+
+.delete-button:hover {
+<<<<<<< HEAD
+    background-color: #c82333;
+=======
+    background-color: #c82333; /* Темно-красный при наведении */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+}
+
+.delete-button:active,
+.edit-button:active {
+<<<<<<< HEAD
+    transform: scale(0.95);
+=======
+    transform: scale(0.95); /* Легкое уменьшение при нажатии */
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+}
+
+.create-edit-discussion-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.create-edit-discussion-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.create-edit-discussion-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.create-edit-discussion-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.create-edit-discussion-container label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.create-edit-discussion-container input,
+.create-edit-discussion-container textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.create-edit-discussion-container textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.create-edit-discussion-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.create-edit-discussion-container button:hover {
+    background-color: #0056b3;
+}
+<<<<<<< HEAD
+
+.create-discussion-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.create-discussion-button:hover {
+    background-color: #218838;
+}
+
+.create-discussion-button:active {
+    transform: scale(0.98);
+}
+=======
+.create-discussion-button {
+    background-color: #28a745; /* Зеленый цвет фона */
+    color: white; /* Белый текст */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде указателя */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 500; /* Полужирный текст */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+    display: inline-flex; /* Для центрирования содержимого */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.create-discussion-button:hover {
+    background-color: #218838; /* Темно-зеленый цвет фона при наведении */
+}
+
+.create-discussion-button:active {
+    transform: scale(0.98); /* Легкое уменьшение при нажатии */
+}
+>>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910

@@ -1,0 +1,415 @@
+/* Общие стили */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&family=Lato:wght@400&display=swap');
+.home {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.3) 100%
+    );
+    z-index: 1;
+}
+
+.header-overlay {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 100;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Lato', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Навигация */
+.navigation {
+    display: flex;
+    justify-content: center;
+    background: #f4f4f4;
+    padding: 10px;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+}
+
+/* Секция с избранными статьями */
+.featured-articles {
+    padding: 20px;
+    text-align: center;
+}
+
+.article-carousel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.article-card {
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.article-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-card h3 {
+    margin: 15px;
+    font-size: 1.2em;
+}
+
+.article-card p {
+    margin: 0 15px 15px;
+    color: #666;
+}
+
+.read-more {
+    display: block;
+    margin: 15px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Секция с популярными темами */
+.popular-topics {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.topics-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.topic-card {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Секция с цитатами */
+.quotes-section {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.quotes-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.quotes-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Секция "О нас" */
+.about-us {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us-text {
+    width: 60%;
+}
+
+.about-us-image {
+    width: 35%;
+    border-radius: 10px;
+}
+
+/* Секция с отзывами */
+.testimonials {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonials-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Секция с подпиской на рассылку */
+.newsletter {
+    padding: 50px 20px;
+    background: #007BFF;
+    color: white;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.newsletter-form button:hover {
+    background: #218838;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header {
+        height: 300px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .article-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .topic-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .quotes-section h2 {
+        font-size: 1.5rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+    }
+
+    cite {
+        font-size: 0.8rem;
+    }
+
+    .about-us-content {
+        flex-direction: column;
+    }
+
+    .about-us-text {
+        width: 100%;
+    }
+
+    .about-us-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-link {
+        margin: 5px 0;
+    }
+}

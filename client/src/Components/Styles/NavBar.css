@@ -1,0 +1,13 @@
+.custom-nav-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.custom-nav-link:hover {
+    color: darkblue;
+}
+
+.custom-nav-link.active {
+    color: red;
+}
