@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .page-container {
     display: flex;
     flex-direction: column;
@@ -9,20 +8,6 @@
     flex: 1;
 }
 
-=======
-/* Основные стили для страницы */
-.page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Минимальная высота равна высоте видимой области */
-}
-
-.content-wrap {
-    flex: 1; /* Растягиваем контент на всю доступную высоту */
-}
-
-/* Стили для футера */
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
 .footer {
     text-align: center;
     padding: 20px;
@@ -49,27 +34,17 @@
     text-decoration: underline;
 }
 
-<<<<<<< HEAD
 .search-form {
     width: 100%;
     position: relative;
     margin-top: 1.1%;
 }
 
-=======
-/* Стили для строки поиска */
-.search-form {
-    width: 100%; /* Занимает всю доступную ширину */
-}
-
-/* Стили для иконки поиска */
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
 .search-icon {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-<<<<<<< HEAD
     pointer-events: none;
 }
 
@@ -78,17 +53,10 @@
     align-items: center;
 }
 
-=======
-    pointer-events: none; /* Чтобы иконка не мешала вводу текста */
-}
-
-/* Стили для кнопки "Создать курс" */
 .create-course-btn {
-    margin-left: 10px; /* Отступ слева от кнопки */
-
+    margin-left: 10px;
 }
-/* Адаптивность */
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+
 @media (max-width: 768px) {
     .header {
         height: 300px;
@@ -166,8 +134,4 @@
     .footer-link {
         margin: 5px 0;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910

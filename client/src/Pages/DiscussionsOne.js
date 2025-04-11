@@ -41,7 +41,6 @@ const DiscussionsOne = () => {
         loadData();
     }, [discussionId]);
 
-    // Добавление комментария
     const handleAddComment = async () => {
         if (newComment.trim() === '') {
             alert("Комментарий не может быть пустым");
@@ -50,15 +49,15 @@ const DiscussionsOne = () => {
 
         try {
             const comment = {
-                DiscussionID: Number(discussionId), // Убедитесь, что discussionId преобразуется в число
-                UserID: user.user.userID, // ID пользователя
-                Content: newComment, // Текст комментария
-                Username: user.user.username, // Имя пользователя
+                DiscussionID: Number(discussionId),
+                UserID: user.user.userID,
+                Content: newComment,
+                Username: user.user.username,
             };
 
             const addedComment = await createComment(comment);
-            setComments([addedComment, ...comments]); // Добавляем новый комментарий в начало списка
-            setNewComment(''); // Очищаем поле ввода
+            setComments([addedComment, ...comments]);
+            setNewComment('');
         } catch (err) {
             console.error("Ошибка при добавлении комментария:", err);
             console.error("Статус ошибки:", err.response?.status);
@@ -67,7 +66,6 @@ const DiscussionsOne = () => {
         }
     };
 
-    // Редактирование комментария
     const handleEditComment = async (commentId) => {
         try {
             await updateComment(commentId, {

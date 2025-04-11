@@ -8,12 +8,8 @@ import { observer } from "mobx-react-lite";
 const NavBar = observer(() => {
     const { user } = useContext(Context);
     const navigate = useNavigate();
-
-<<<<<<< HEAD
     const username = user.user?.username;
-=======
-    const username = user.user?.username; // Используем опциональную цепочку для безопасного доступа
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+
 
     const handleLogout = () => {
         user.setIsAuth(false);
@@ -48,8 +44,4 @@ const NavBar = observer(() => {
     );
 });
 
-<<<<<<< HEAD
-export default NavBar;
-=======
-export default NavBar;
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+export default NavBar

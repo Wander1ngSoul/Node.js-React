@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-=======
-/* Стили для контейнера новостей */
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+
 .news-container {
     padding: 20px;
 }
 
 .news-title {
     text-align: center;
-<<<<<<< HEAD
-    margin-bottom: 1.5%;
-=======
     margin-bottom: 30px;
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
     font-size: 2.5rem;
     color: #333;
 }
@@ -20,11 +13,7 @@
 .news-block {
     background-color: #f9f9f9;
     border-radius: 8px;
-<<<<<<< HEAD
-    padding: 2%;
-=======
     padding: 20px;
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
 }
@@ -60,7 +49,10 @@
     align-items: center;
 }
 
-<<<<<<< HEAD
+.back-button {
+    margin-bottom: 20px;
+}
+
 .admin-buttons {
     display: flex;
     gap: 10px;
@@ -90,15 +82,4 @@
 
 .footer-link:hover {
     text-decoration: underline;
-=======
-/* Стили для кнопки "Назад" */
-.back-button {
-    margin-bottom: 20px;
-}
-
-/* Стили для кнопок администратора */
-.admin-buttons {
-    display: flex;
-    gap: 10px; /* Расстояние между кнопками */
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
 }

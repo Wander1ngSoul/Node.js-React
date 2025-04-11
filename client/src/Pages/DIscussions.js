@@ -1,14 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
-<<<<<<< HEAD
 import { useNavigate, Link } from 'react-router-dom';
 import { fetchDiscussions, deleteDiscussion } from '../Services/discussionsService';
 import { Context } from '../index';
-import { Button } from "react-bootstrap"; // Импортируем Button из React Bootstrap
-=======
-import { useNavigate } from 'react-router-dom';
-import { fetchDiscussions, deleteDiscussion } from '../Services/discussionsService';
-import { Context } from '../index';
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+import { Button } from "react-bootstrap";
 import '../Styles/Pages/Discussions.css';
 
 const Discussions = () => {
@@ -40,10 +34,6 @@ const Discussions = () => {
     };
 
     const handleDelete = async (discussionId) => {
-<<<<<<< HEAD
-=======
-        // Подтверждение перед удалением
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
         const isConfirmed = window.confirm('Вы уверены, что хотите удалить это обсуждение?');
 
         if (isConfirmed) {
@@ -79,44 +69,22 @@ const Discussions = () => {
 
     return (
         <div className="discussions-container">
-<<<<<<< HEAD
-            <Button
-                variant="outline-secondary" // Изменяем на стиль кнопки из Bootstrap
-                onClick={() => navigate(-1)}
-
-            >
-                Назад
-            </Button>
+            <Button variant="outline-secondary" onClick={() => navigate(-1)}>Назад</Button>
 
             <h1 className="discussions-title">Обсуждения</h1>
 
-            {user.user && user.user.roleID === 2 && (
+            {user.user && user.user.roleID === 3 && (
                 <Button
                     variant="success"
-=======
-            <button className="back-button" onClick={() => navigate(-1)}>
-                ← Назад
-            </button>
-
-            <h1 className="discussions-title">Обсуждения</h1>
-
-            {/* Кнопка "Создать обсуждение" для администратора */}
-            {user.user && user.user.roleID === 3 && (
-                <button
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
                     className="create-discussion-button"
                     onClick={handleCreate}
                 >
                     Создать обсуждение
-<<<<<<< HEAD
                 </Button>
-=======
-                </button>
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
             )}
 
             <div className="discussions-list">
-                {discussions && discussions.length > 0 ? (
+                {discussions.length > 0 ? (
                     discussions.map((discussion) => (
                         <div key={discussion.DiscussionID} className="discussion-block">
                             <div className="discussion-item">
@@ -126,46 +94,29 @@ const Discussions = () => {
                                     <span>Автор: {discussion.CreatedBy || 'Не указан'}</span>
                                     <span>Дата: {formatDate(discussion.CreatedDate)}</span>
                                     <div className="buttons-container">
-<<<<<<< HEAD
                                         <Button
-=======
-                                        <button
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+                                            variant="primary"
                                             className="discussion-button"
                                             onClick={() => navigate(`/discussions/${discussion.DiscussionID}`)}
                                         >
                                             Перейти к обсуждению
-<<<<<<< HEAD
                                         </Button>
-                                        {user.user && user.user.roleID === 2 && (
-                                            <>
-                                                <Button
-=======
-                                        </button>
                                         {user.user && user.user.roleID === 3 && (
                                             <>
-                                                <button
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+                                                <Button
+                                                    variant="warning"
                                                     className="edit-button"
                                                     onClick={() => handleEdit(discussion.DiscussionID)}
                                                 >
                                                     Редактировать
-<<<<<<< HEAD
                                                 </Button>
                                                 <Button
-=======
-                                                </button>
-                                                <button
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
+                                                    variant="danger"
                                                     className="delete-button"
                                                     onClick={() => handleDelete(discussion.DiscussionID)}
                                                 >
                                                     Удалить
-<<<<<<< HEAD
                                                 </Button>
-=======
-                                                </button>
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
                                             </>
                                         )}
                                     </div>
@@ -177,7 +128,7 @@ const Discussions = () => {
                     <div className="no-discussions">Нет доступных обсуждений.</div>
                 )}
             </div>
-<<<<<<< HEAD
+
             <footer className="footer">
                 <div className="footer-content">
                     <p>© 2024 Журнал Психологии. Все права защищены.</p>
@@ -186,22 +137,10 @@ const Discussions = () => {
                         <Link to="/terms-of-use" className="footer-link">Условия использования</Link>
                         <Link to="/contact-us" className="footer-link">Свяжитесь с нами</Link>
                     </div>
-=======
-
-            {/* Футер */}
-            <footer className="footer">
-                <div className="footer-content">
-                    <p>© 2023 Обсуждения. Все права защищены.</p>
-                    <p>Свяжитесь с нами: support@discussions.com</p>
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
                 </div>
             </footer>
         </div>
     );
 };
 
-<<<<<<< HEAD
 export default Discussions;
-=======
-export default Discussions;
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910

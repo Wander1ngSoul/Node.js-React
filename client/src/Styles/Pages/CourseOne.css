@@ -1,12 +1,99 @@
-<<<<<<< HEAD
-.course-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background: #f4f7fc;
+
+.course-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.course-header {
+    text-align: center;
+    margin-bottom: 30px;
     padding: 20px;
-    position: relative;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+
+.course-price {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+
+.course-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.enroll-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enroll-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loading, .error, .not-found {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    color: #555;
+}
+
+.error {
+    color: #ff4d4d;
+}
+
+.not-found {
+    color: #777;
 }
 
 .back-button {
@@ -40,184 +127,9 @@
     from {
         opacity: 0;
         transform: translateY(2px);
-=======
-/* Основные стили */
-.course-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Анимация появления */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-<<<<<<< HEAD
-.course-title {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #2a2a2a;
-    margin-bottom: 10px;
-=======
-/* Заголовок курса */
-.course-header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.course-title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    font-weight: 700;
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
-}
-
-.course-price {
-    font-size: 1.5rem;
-    font-weight: 500;
-<<<<<<< HEAD
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.course-details {
-    text-align: left;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.course-details h2 {
-    font-size: 1.3rem;
-    color: #333;
-    margin-bottom: 10px;
-=======
-    opacity: 0.9;
-}
-
-/* Описание курса */
-.course-content {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
-}
-
-.course-description {
-    font-size: 1.1rem;
-<<<<<<< HEAD
-    color: #444;
-    line-height: 1.6;
-}
-
-.cart-button {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #6d5dfc, #4a3fcc);
-=======
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Кнопка "Записаться на курс" */
-.enroll-button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-<<<<<<< HEAD
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-.cart-button:hover {
-    background: linear-gradient(25deg, #5a4cd8, #3a2fab);
-    transform: translateY(-2px);
-}
-
-.cart-button:active {
-    transform: scale(0.98);
-}
-
-.loading, .error, .not-found {
-    text-align: center;
-    font-size: 1.2rem;
-=======
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.enroll-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Сообщения о загрузке, ошибке и отсутствии курса */
-.loading, .error, .not-found {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 50px;
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
-    color: #555;
-}
-
-.error {
-<<<<<<< HEAD
-    color: #d9534f;
-=======
-    color: #ff4d4d;
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
-}
-
-.not-found {
-    color: #777;
-<<<<<<< HEAD
-}
-
-
-
-.footer nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.footer nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer nav ul li a:hover {
-    text-decoration: underline;
-}
-=======
-}
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910

@@ -1,10 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
-<<<<<<< HEAD
 import { useNavigate, Link } from 'react-router-dom';
-=======
-import { useNavigate } from 'react-router-dom';
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
 import '../Styles/Pages/News.css';
 import { fetchNews, deleteNews } from "../Services/newsService";
 import { Context } from '../index';
@@ -49,7 +45,6 @@ const News = () => {
     };
 
     return (
-<<<<<<< HEAD
         <div className="news-page">
             <Container className="news-container">
                 <Row className="align-items-center mb-4">
@@ -66,7 +61,7 @@ const News = () => {
                     </Col>
                 </Row>
 
-                {user.user && user.user.roleID === 2 && (
+                {user.user && (user.user.roleID === 2 || user.user.roleID === 3) && (
                     <Button
                         variant="success"
                         className="mb-4"
@@ -86,7 +81,7 @@ const News = () => {
                                     <small className="text-muted">
                                         Опубликовано: {new Date(item.CreatedDate).toLocaleDateString()}
                                     </small>
-                                    {user.user && user.user.roleID === 2 && (
+                                    {user.user && (user.user.roleID === 2 || user.user.roleID === 3) && (
                                         <div className="admin-buttons">
                                             <Button
                                                 variant="warning"
@@ -127,68 +122,6 @@ const News = () => {
                 </div>
             </footer>
         </div>
-=======
-        <Container className="news-container">
-            <Button
-                variant="outline-secondary"
-                onClick={() => navigate(-1)}
-                className="mb-4"
-            >
-                Назад
-            </Button>
-
-            <h1 className="news-title">Новости психологии</h1>
-
-            {user.user && user.user.roleID === 3 && (
-                <Button
-                    variant="success"
-                    className="mb-4"
-                    onClick={handleCreate}
-                >
-                    Создать новость
-                </Button>
-            )}
-
-            <Row>
-                {newsList.map((item) => (
-                    <Col key={item.NewsID} xs={12} className="news-block mb-4">
-                        <div className="news-item">
-                            <h2 className="news-item-title">{item.Title}</h2>
-                            <p className="news-item-content">{item.Content}</p>
-                            <div className="news-item-footer">
-                                <small className="text-muted">
-                                    Опубликовано: {new Date(item.CreatedDate).toLocaleDateString()}
-                                </small>
-                                {user.user && user.user.roleID === 3 && (
-                                    <div className="admin-buttons">
-                                        <Button
-                                            variant="warning"
-                                            className="me-2"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                handleEdit(item.NewsID);
-                                            }}
-                                        >
-                                            Изменить
-                                        </Button>
-                                        <Button
-                                            variant="danger"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                handleDelete(item.NewsID);
-                                            }}
-                                        >
-                                            Удалить
-                                        </Button>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    </Col>
-                ))}
-            </Row>
-        </Container>
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
     );
 };
 

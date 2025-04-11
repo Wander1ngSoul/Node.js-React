@@ -28,9 +28,9 @@ const CourseCard = ({ course, onDelete }) => {
     }, [user.isAuth, user.user.userID, course.CourseID]);
 
     const handleBuy = (e) => {
+        e.stopPropagation();
         try {
             if (user.isAuth) {
-                e.stopPropagation();
                 alert(`Курс "${course.CourseName}" куплен!`);
             } else {
                 alert("Необходимо пройти авторизацию!");
@@ -104,12 +104,9 @@ const CourseCard = ({ course, onDelete }) => {
                     Цена: {course.Price} руб.
                 </Card.Text>
                 <div className="button-container" onClick={(e) => e.stopPropagation()}>
-<<<<<<< HEAD
-=======
                     <Button className="Btn-Pay" onClick={handleBuy}>
                         Купить
                     </Button>
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
                     {isInCart ? (
                         <Button className="Btn-RemoveFromCart" onClick={handleRemoveFromCart}>
                             Удалить из корзины
@@ -119,11 +116,7 @@ const CourseCard = ({ course, onDelete }) => {
                             Добавить в корзину
                         </Button>
                     )}
-<<<<<<< HEAD
-                    {user.user && user.user.roleID === 2 && (
-=======
                     {user.user && user.user.roleID === 3 && (
->>>>>>> 9a1df878aae47dbfe81de5370f5879a2f01f7910
                         <>
                             <Button className="Btn-Edit" onClick={handleEdit}>
                                 Изменить курс

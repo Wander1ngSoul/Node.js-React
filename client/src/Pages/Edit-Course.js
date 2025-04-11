@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchCourseByID, updateCourse, createCourse } from '../Services/courseService'; // Добавляем createCourse
+import { fetchCourseByID, updateCourse, createCourse } from '../Services/courseService';
 import { Context } from '../index';
 import '../Styles/Pages/Edit-Course.css';
 
@@ -12,11 +12,9 @@ const EditCourse = () => {
     const [error, setError] = useState('');
     const { user } = useContext(Context);
 
-    // Определяем, создаем ли мы новый курс или редактируем существующий
     const isNewCourse = CourseID === 'new';
 
     useEffect(() => {
-        // Если это не новый курс, загружаем данные существующего курса
         if (!isNewCourse) {
             const loadCourse = async () => {
                 setLoading(true);
@@ -41,8 +39,6 @@ const EditCourse = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Валидация полей
         if (!course.CourseName || !course.Description || course.Price <= 0) {
             setError('Все поля должны быть заполнены, а цена должна быть больше 0.');
             return;
@@ -54,16 +50,14 @@ const EditCourse = () => {
         try {
             let response;
             if (isNewCourse) {
-                // Создаем новый курс
                 response = await createCourse(course);
                 alert('Курс успешно создан!');
             } else {
-                // Обновляем существующий курс
                 response = await updateCourse(CourseID, course);
                 alert('Курс успешно обновлен!');
             }
             console.log('Ответ сервера:', response);
-            navigate(`/course/${response.CourseID}`); // Перенаправляем на страницу курса
+            navigate(`/course/${response.CourseID}`);
         } catch (error) {
             console.error('Ошибка:', error);
             setError(isNewCourse ? 'Не удалось создать курс. Пожалуйста, попробуйте снова.' : 'Не удалось обновить курс. Пожалуйста, попробуйте снова.');
