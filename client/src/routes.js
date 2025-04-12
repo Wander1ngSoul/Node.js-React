@@ -24,7 +24,7 @@ export const authRoutes = [
         Component: Admin
     },
     {
-        path: CART_ROUTE + '/:userID', // Добавляем динамический параметр
+        path: CART_ROUTE + '/:userID',
         Component: Cart
     },
 ];

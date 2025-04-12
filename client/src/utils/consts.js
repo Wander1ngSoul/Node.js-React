@@ -18,5 +18,5 @@ export const API_URL_CART = 'http://localhost:5000/api/cart';
 export const API_URL_COMMENTS = 'http://localhost:5000/api/comments';
 export const CREATE_DISCUSSION_ROUTE = '/create-discussion';
 export const EDIT_DISCUSSION_ROUTE = '/edit-discussion';
-export const CREATE_COURSE_ROUTE = '/create-course'; // Новая константа
-export const EDIT_COURSE_ROUTE = '/edit-course'; // Новая константа
+export const CREATE_COURSE_ROUTE = '/create-course';
+export const EDIT_COURSE_ROUTE = '/edit-course';

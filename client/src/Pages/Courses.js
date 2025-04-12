@@ -9,6 +9,11 @@ import { Context } from '../index';
 
 const Courses = () => {
     const [coursesList, setCoursesList] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [minPrice, setMinPrice] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
+    const [onlyWithDescription, setOnlyWithDescription] = useState(false);
+
     const navigate = useNavigate();
     const { user } = useContext(Context);
 
@@ -35,6 +40,14 @@ const Courses = () => {
         }
     };
 
+    const filteredCourses = coursesList.filter(course => {
+        const matchesName = course.CourseName?.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesMinPrice = minPrice === '' || Number(course.Price) >= Number(minPrice);
+        const matchesMaxPrice = maxPrice === '' || Number(course.Price) <= Number(maxPrice);
+        const matchesDescription = !onlyWithDescription || !!course.Description;
+        return matchesName && matchesMinPrice && matchesMaxPrice && matchesDescription;
+    });
+
     return (
         <div className="page-container">
             <Container className="mt-2 content-wrap">
@@ -46,15 +59,38 @@ const Courses = () => {
                     </Col>
                     <Col className="flex-grow-1">
                         <Form className="search-form">
-                            <Form.Group className="form-group">
+                            <Form.Group className="mb-2">
                                 <Form.Control
                                     type="text"
-                                    id="searchInput"
-                                    placeholder="Поиск"
-                                    className="w-100"
+                                    placeholder="Поиск по названию"
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
                                 />
-                                <i className="fas fa-search search-icon"></i>
                             </Form.Group>
+
+                            <Row className="price-fields">
+                                <Col xs={6} md={4} lg={3}>
+                                    <Form.Control
+                                        type="number"
+                                        placeholder="Мин. цена"
+                                        value={minPrice}
+                                        onChange={(e) => setMinPrice(e.target.value)}
+                                        size="sm"
+                                        className="small-price-input"
+                                    />
+                                </Col>
+                                <Col xs={6} md={4} lg={3}>
+                                    <Form.Control
+                                        type="number"
+                                        placeholder="Макс. цена"
+                                        value={maxPrice}
+                                        onChange={(e) => setMaxPrice(e.target.value)}
+                                        size="sm"
+                                        className="small-price-input"
+                                    />
+                                </Col>
+                            </Row>
+
                         </Form>
                     </Col>
                     <Col xs="auto">
@@ -67,7 +103,7 @@ const Courses = () => {
                 </Row>
 
                 <Row>
-                    {coursesList.map(course => (
+                    {filteredCourses.map(course => (
                         <Col md={3} key={course.CourseID}>
                             <CourseCard course={course} onDelete={handleDeleteCourse} />
                         </Col>

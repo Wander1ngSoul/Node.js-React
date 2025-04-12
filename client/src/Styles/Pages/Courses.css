@@ -57,6 +57,17 @@
     margin-left: 10px;
 }
 
+
+.price-fields {
+    gap: 2px;
+}
+
+.small-price-input {
+    max-width: 120px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
 @media (max-width: 768px) {
     .header {
         height: 300px;

@@ -73,7 +73,7 @@ const Discussions = () => {
 
             <h1 className="discussions-title">Обсуждения</h1>
 
-            {user.user && user.user.roleID === 3 && (
+            {user.user && user.user.roleID === 2 && (
                 <Button
                     variant="success"
                     className="create-discussion-button"
@@ -101,7 +101,7 @@ const Discussions = () => {
                                         >
                                             Перейти к обсуждению
                                         </Button>
-                                        {user.user && user.user.roleID === 3 && (
+                                        {user.user && user.user.roleID === 2 && (
                                             <>
                                                 <Button
                                                     variant="warning"

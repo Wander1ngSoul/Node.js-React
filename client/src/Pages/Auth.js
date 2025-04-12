@@ -38,6 +38,14 @@ const Auth = () => {
         return Object.keys(newErrors).length === 0;
     };
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+        if (errors[name]) {
+            setErrors(prev => ({ ...prev, [name]: '' }));
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -70,27 +78,29 @@ const Auth = () => {
             alert(isLogin ? 'Успешный вход!' : 'Успешно зарегистрировано!');
             console.log(isLogin ? 'Пользователь успешно вошел:' : 'Пользователь успешно создан:', result);
 
-            localStorage.setItem('token', result.token);
-            localStorage.setItem('username', result.username);
-            localStorage.setItem('userID', result.userID);
-            localStorage.setItem('roleID', result.roleID);
+            if (isLogin) {
+                localStorage.setItem('token', result.token);
+                localStorage.setItem('username', result.username);
+                localStorage.setItem('userID', result.userID);
+                localStorage.setItem('roleID', result.roleID);
 
+                user.setIsAuth(true);
+                user.setUser({ username: result.username, userID: result.userID, roleID: result.roleID });
 
-            user.setIsAuth(true);
-            user.setUser({ username: result.username, userID: result.userID, roleID: result.roleID });
-
-            navigate(HOME_ROUTE);
+                navigate(HOME_ROUTE);
+            } else {
+                setFormData({
+                    username: '',
+                    email: '',
+                    password: '',
+                    role: 'Пользователь'
+                });
+                setErrors({});
+                navigate(LOGIN_ROUTE);
+            }
         } catch (error) {
             console.error("Ошибка: ", error.message);
             alert(error.message);
-        }
-    };
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-        if (errors[name]) {
-            setErrors(prev => ({ ...prev, [name]: '' }));
         }
     };
 

@@ -1,4 +1,4 @@
-/* Общие стили */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&family=Lato:wght@400&display=swap');
 .home {
     font-family: Arial, sans-serif;
@@ -58,7 +58,7 @@
     line-height: 1.6;
 }
 
-/* Анимация появления */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -70,7 +70,6 @@
     }
 }
 
-/* Навигация */
 .navigation {
     display: flex;
     justify-content: center;
@@ -89,7 +88,7 @@
     color: #007BFF;
 }
 
-/* Секция с избранными статьями */
+
 .featured-articles {
     padding: 20px;
     text-align: center;
@@ -137,7 +136,6 @@
     text-decoration: underline;
 }
 
-/* Секция с популярными темами */
 .popular-topics {
     padding: 20px;
     background: #f9f9f9;
@@ -159,7 +157,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Секция с цитатами */
 .quotes-section {
     background-size: cover;
     background-position: center;
@@ -192,7 +189,6 @@ cite {
     font-weight: bold;
 }
 
-/* Секция "О нас" */
 .about-us {
     padding: 20px;
     background: #f9f9f9;
@@ -215,7 +211,6 @@ cite {
     border-radius: 10px;
 }
 
-/* Секция с отзывами */
 .testimonials {
     padding: 50px 20px;
     background: #f9f9f9;
@@ -260,7 +255,6 @@ cite {
     color: #666;
 }
 
-/* Секция с подпиской на рассылку */
 .newsletter {
     padding: 50px 20px;
     background: #007BFF;
@@ -307,7 +301,63 @@ cite {
     background: #218838;
 }
 
-/* Футер */
+
+/* Стили для формы подписки */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.newsletter-form button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #45a049;
+}
+
+.newsletter-form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Сообщения о статусе подписки */
+.subscription-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.subscription-message.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.subscription-message.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
 .footer {
     text-align: center;
     padding: 20px;
@@ -334,7 +384,6 @@ cite {
     text-decoration: underline;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .header {
         height: 300px;
