@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { API_URL_DISCUSSIONS } from "../utils/consts";
 
-// Получение всех обсуждений
 export const fetchDiscussions = async () => {
     try {
         const response = await axios.get(API_URL_DISCUSSIONS);
@@ -12,7 +11,6 @@ export const fetchDiscussions = async () => {
     }
 };
 
-// Получение обсуждения по ID
 export const fetchDiscussionByID = async (DiscussionID) => {
     try {
         const response = await axios.get(`${API_URL_DISCUSSIONS}/${DiscussionID}`);

@@ -1,23 +1,22 @@
 import axios from 'axios';
 import {API_URL_COMMENTS} from "../utils/consts";
 
-// Получить все комментарии для обсуждения
+
 export const fetchComments = async (discussionId) => {
     const response = await axios.get(`${API_URL_COMMENTS}/${discussionId}`);
     return response.data;
 };
 
-// Создать комментарий
+
 export const createComment = async (comment) => {
     const response = await axios.post(API_URL_COMMENTS, comment);
     return response.data;
 };
 
-// Редактировать комментарий
 export const updateComment = async (commentId, data) => {
     const response = await axios.put(`${API_URL_COMMENTS}/${commentId}`, data);
     return response.data;
-};
+};x
 
 export const deleteComment = async (commentId, data) => {
     const response = await axios.delete(`${API_URL_COMMENTS}/${commentId}`, { data });

@@ -5,12 +5,7 @@ class commentController {
     // Создание комментария
     async create(req, res, next) {
         try {
-            const {DiscussionID, UserID, Content, Username} = req.body;
-
-            // if (!DiscussionID || !UserID || !Content || !Username) {
-            //     return next(ApiError.badRequest("Не все обязательные поля заполнены"));
-            // }
-
+            const {DiscussionID, UserID, Content, Username, roleID} = req.body;
             const comment = await Comments.create({
                 DiscussionID,
                 UserID,
@@ -26,7 +21,6 @@ class commentController {
         }
     }
 
-    // Получение всех комментариев для обсуждения
     async getAll(req, res, next) {
         try {
             const {discussionId} = req.params;
@@ -40,7 +34,6 @@ class commentController {
         }
     }
 
-    // Редактирование комментария
     async update(req, res, next) {
         try {
             const {commentId} = req.params;
@@ -51,8 +44,8 @@ class commentController {
                 return next(ApiError.notFound("Комментарий не найден"));
             }
 
-            // Проверка, что пользователь является автором комментария или администратором
-            if (comment.UserID !== UserID && RoleID !== 3) {
+
+            if (comment.UserID !== UserID && roleID !== 3) {
                 return next(ApiError.forbidden("Нет прав на редактирование комментария"));
             }
 
@@ -64,8 +57,6 @@ class commentController {
             return next(ApiError.badRequest(e.message));
         }
     }
-
-    // Удаление комментария
     async delete(req, res, next) {
         try {
             const {commentId} = req.params;
@@ -76,7 +67,6 @@ class commentController {
                 return next(ApiError.notFound("Комментарий не найден"));
             }
 
-            // Проверка, что пользователь является автором комментария или администратором
             if (comment.UserID !== UserID && RoleID !== 3) {
                 return next(ApiError.forbidden("Нет прав на удаление комментария"));
             }
