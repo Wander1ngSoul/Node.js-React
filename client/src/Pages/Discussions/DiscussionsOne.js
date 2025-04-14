@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchDiscussionByID } from '../Services/discussionsService';
-import { fetchComments, createComment, updateComment, deleteComment } from '../Services/commentService';
-import { Context } from '../index';
-import '../Styles/Pages/DiscussionOne.css';
+import { fetchDiscussionByID } from '../../Services/discussionsService';
+import { fetchComments, createComment, updateComment, deleteComment } from '../../Services/commentService';
+import { Context } from '../../index';
+import '../../Styles/Pages/Discussions/DiscussionOne.css';
 
 const DiscussionsOne = () => {
     const { discussionId } = useParams();

@@ -53,7 +53,7 @@ export const updateDiscussion = async (discussionID, discussionData) => {
     }
 };
 
-// Удаление обсуждения
+
 export const deleteDiscussion = async (discussionID) => {
     try {
         const token = localStorage.getItem('token'); // Получаем токен из localStorage

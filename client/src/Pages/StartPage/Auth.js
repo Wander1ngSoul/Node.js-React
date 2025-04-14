@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { Button, Card, Container, Form } from "react-bootstrap";
 import { useLocation, useNavigate } from 'react-router-dom';
-import { LOGIN_ROUTE, REGISTRATION_ROUTE, HOME_ROUTE } from "../utils/consts";
-import { createUser } from "../Services/RegistrationService";
-import { loginUser } from "../Services/loginService";
-import { Context } from "../index";
-import '../Styles/Pages/Auth.css';
+import { LOGIN_ROUTE, REGISTRATION_ROUTE, HOME_ROUTE } from "../../utils/consts";
+import { createUser } from "../../Services/RegistrationService";
+import { loginUser } from "../../Services/loginService";
+import { Context } from "../../index";
+import '../../Styles/Pages/StartPage/Auth.css';
 
 const Auth = () => {
     const { user } = useContext(Context);

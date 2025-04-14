@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createCourse } from '../Services/courseService';
-import { Context } from '../index';
-import '../Styles/Pages/CreateCourse.css'; // Импортируем файл стилей
+import { createCourse } from '../../Services/courseService';
+import { Context } from '../../index';
+import '../../Styles/Pages/Courses/CreateCourse.css'; // Импортируем файл стилей
 
 const CreateCourse = () => {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { createDiscussion, updateDiscussion, fetchDiscussionByID } from '../Services/discussionsService';
-import { Context } from '../index';
+import { createDiscussion, updateDiscussion, fetchDiscussionByID } from '../../Services/discussionsService';
+import { Context } from '../../index';
 
 const CreateEditDiscussion = () => {
     const { id } = useParams(); // Получаем ID обсуждения, если редактируем

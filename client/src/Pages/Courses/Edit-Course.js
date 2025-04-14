@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchCourseByID, updateCourse, createCourse } from '../Services/courseService';
-import { Context } from '../index';
-import '../Styles/Pages/Edit-Course.css';
+import { fetchCourseByID, updateCourse, createCourse } from '../../Services/courseService';
+import { Context } from '../../index';
+import '../../Styles/Pages/Courses/Edit-Course.css';
 
 const EditCourse = () => {
     const { CourseID } = useParams(); // Получаем CourseID из параметров маршрута

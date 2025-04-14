@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { fetchDiscussions, deleteDiscussion } from '../Services/discussionsService';
-import { Context } from '../index';
+import { fetchDiscussions, deleteDiscussion } from '../../Services/discussionsService';
+import { Context } from '../../index';
 import { Button } from "react-bootstrap";
-import '../Styles/Pages/Discussions.css';
+import '../../Styles/Pages/Discussions/Discussions.css';
 
 const Discussions = () => {
     const [discussions, setDiscussions] = useState([]);

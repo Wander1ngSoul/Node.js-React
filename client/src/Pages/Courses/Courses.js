@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from 'react-router-dom';
-import CourseCard from "../Components/CourseCard";
-import '../Courses/Style/CourseStore.css';
-import { fetchCourses, deleteCourse as deleteCourseApi } from '../Services/courseService';
-import '../Styles/Pages/Courses.css';
-import { Context } from '../index';
+import CourseCard from "../../Components/CourseCard";
+import '../../Courses/Style/CourseStore.css';
+import { fetchCourses, deleteCourse as deleteCourseApi } from '../../Services/courseService';
+import '../../Styles/Pages/Courses/Courses.css';
+import { Context } from '../../index';
 
 const Courses = () => {
     const [coursesList, setCoursesList] = useState([]);

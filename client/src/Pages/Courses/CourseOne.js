@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { fetchCourseByID } from "../Services/courseService";
-import { fetchCart } from "../Services/cartService";
-import { deleteFromCard } from "../Services/cartService";
-import { addToCard } from "../Services/cartService";
-import { Context } from "../index";
-import '../Styles/Pages/CourseOne.css';
+import { fetchCourseByID } from "../../Services/courseService";
+import { fetchCart } from "../../Services/cartService";
+import { deleteFromCard } from "../../Services/cartService";
+import { addToCard } from "../../Services/cartService";
+import { Context } from "../../index";
+import '../../Styles/Pages/Courses/CourseOne.css';
 
 const CourseOne = () => {
     const params = useParams();

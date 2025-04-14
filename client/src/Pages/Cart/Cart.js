@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { deleteFromCard, fetchCart } from "../Services/cartService";
-import { Context } from "../index";
-import '../Styles/Pages/Cart.css';
+import { deleteFromCard, fetchCart } from "../../Services/cartService";
+import { Context } from "../../index";
+import '../../Styles/Pages/StartPage/Cart.css';
 
 const Cart = () => {
     const [cartList, setCartList] = useState([]);

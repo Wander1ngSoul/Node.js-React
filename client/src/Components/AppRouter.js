@@ -15,15 +15,15 @@ import {
     CREATE_COURSE_ROUTE
 } from '../utils/consts';
 
-import Home from '../Pages/Home';
-import CourseOne from '../Pages/CourseOne';
-import Cart from '../Pages/Cart';
-import News from '../Pages/News';
-import CreateEditNews from '../Pages/Edit-News';
-import Discussions from '../Pages/DIscussions';
-import CreateEditDiscussion from '../Pages/EditDiscussion';
-import EditCourse from '../Pages/Edit-Course'; // Импортируйте компонент для редактирования курса
-import CreateCourse from '../Pages/CreateCourse'
+import Home from '../Pages/StartPage/Home';
+import CourseOne from '../Pages/Courses/CourseOne';
+import Cart from '../Pages/Cart/Cart';
+import News from '../Pages/News/News';
+import CreateEditNews from '../Pages/News/Edit-News';
+import Discussions from '../Pages/Discussions/DIscussions';
+import CreateEditDiscussion from '../Pages/Discussions/EditDiscussion';
+import EditCourse from '../Pages/Courses/Edit-Course'; // Импортируйте компонент для редактирования курса
+import CreateCourse from '../Pages/Discussions/CreateCourse'
 
 const AppRouter = () => {
     const { user } = useContext(Context);

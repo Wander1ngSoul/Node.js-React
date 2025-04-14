@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate, Link } from 'react-router-dom';
-import '../Styles/Pages/News.css';
-import { fetchNews, deleteNews } from "../Services/newsService";
-import { Context } from '../index';
+import '../../Styles/Pages/News/News.css';
+import { fetchNews, deleteNews } from "../../Services/newsService";
+import { Context } from '../../index';
 
 const News = () => {
     const [newsList, setNewsList] = useState([]);

@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Context } from '../index';
-import '../Styles/Pages/Home.css';
+import { Context } from '../../index';
+import '../../Styles/Pages/StartPage/Home.css';
 
-import stressImage from '../Images/Photo1.avif';
-import emotionalIntelligenceImage from '../Images/Photo2.avif';
-import sleepImage from '../Images/Photo3.avif';
-import aboutUsImage from '../Images/Fon-TopBar.avif';
-import aboutUsBottom from '../Images/AboutAtUs.avif';
-import quoteImage from '../Images/Photo4.avif';
-import user1 from '../Images/user1.jpeg';
-import user2 from '../Images/user1.jpeg';
-import user3 from '../Images/user1.jpeg';
+import stressImage from '../../Images/Photo1.avif';
+import emotionalIntelligenceImage from '../../Images/Photo2.avif';
+import sleepImage from '../../Images/Photo3.avif';
+import aboutUsImage from '../../Images/Fon-TopBar.avif';
+import aboutUsBottom from '../../Images/AboutAtUs.avif';
+import quoteImage from '../../Images/Photo4.avif';
+import user1 from '../../Images/user1.jpeg';
+import user2 from '../../Images/user1.jpeg';
+import user3 from '../../Images/user1.jpeg';
 
 const Home = () => {
     const { user } = useContext(Context);

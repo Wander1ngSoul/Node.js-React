@@ -1,0 +1,86 @@
+.emotional-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f7f9fc, #e6ecf3);
+    color: #2c3e50;
+    padding: 20px;
+}
+
+.emotional-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.emotional-header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.emotional-header p {
+    font-size: 1.2em;
+    color: #566573;
+}
+
+.emotional-test,
+.emotional-tips {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.test-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.test-options button,
+.toggle-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.test-options button:hover,
+.toggle-btn:hover {
+    background-color: #2980b9;
+}
+
+.test-result {
+    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    color: #2c3e50;
+}
+
+.tips-list {
+    margin-top: 15px;
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #2e4053;
+}
+
+.emotional-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-link {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #1c5d99;
+}

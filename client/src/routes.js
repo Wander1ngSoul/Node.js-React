@@ -7,16 +7,22 @@ import {
     REGISTRATION_ROUTE,
     NEWS_ROUTE,
     DISCUSSIONS_ROUTE,
+    STRESS_PAGE_ROUTE,
+    EMOTIONALINTELLIGENCE_ROUTE,
+    SLEEPANDMENTALHEALTH_ROUTE
 } from "./utils/consts";
 
-import Admin from './Pages/Admin';
-import Cart from './Pages/Cart';
-import Courses from './Pages/Courses';
-import Auth from './Pages/Auth';
-import CourseOne from './Pages/CourseOne';
-import News from './Pages/News';
-import Discussions from "./Pages/DIscussions";
-import DiscussionsOne from "./Pages/DiscussionsOne";
+import Admin from './Pages/StartPage/Admin';
+import Cart from './Pages/Cart/Cart';
+import Courses from './Pages/Courses/Courses';
+import Auth from './Pages/StartPage/Auth';
+import CourseOne from './Pages/Courses/CourseOne';
+import News from './Pages/News/News';
+import Discussions from "./Pages/Discussions/DIscussions";
+import DiscussionsOne from "./Pages/Discussions/DiscussionsOne";
+import Topic_Stress from "./Pages/Public_Themes/Topic_Stress";
+import EmotionalIntelligence from "./Pages/Public_Themes/EmotionalIntelligence";
+import mentalHealth from "./Pages/Public_Themes/MentalHealth";
 
 export const authRoutes = [
     {
@@ -57,5 +63,17 @@ export const publicRoutes = [
     {
         path: DISCUSSIONS_ROUTE + '/:discussionId',
         Component: DiscussionsOne
+    },
+    {
+        path: STRESS_PAGE_ROUTE,
+        Component: Topic_Stress
+    },
+    {
+        path: EMOTIONALINTELLIGENCE_ROUTE,
+        Component:EmotionalIntelligence
+    },
+    {
+        path: SLEEPANDMENTALHEALTH_ROUTE,
+        Component: mentalHealth
     }
 ];

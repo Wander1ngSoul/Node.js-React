@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
-import { createNews, updateNews, fetchNewsById } from '../Services/newsService';
-import { Context } from '../index';
+import { createNews, updateNews, fetchNewsById } from '../../Services/newsService';
+import { Context } from '../../index';
 
 const CreateEditNews = () => {
     const { id } = useParams();
