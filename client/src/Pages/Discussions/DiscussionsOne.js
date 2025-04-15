@@ -105,7 +105,7 @@ const DiscussionsOne = () => {
         try {
             const deleteData = {
                 UserID: user.user.userID,
-                RoleID: user.user.RoleID
+                RoleID: user.user.roleID
             };
 
             await deleteComment(commentId, deleteData);
