@@ -1,4 +1,4 @@
-Step by start project
+Stepsby start project
 1. Open Directory Server
 2. Open console
 3. Write - npm install requirements.txt
