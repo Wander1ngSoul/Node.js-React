@@ -123,12 +123,6 @@ const Home = () => {
                         <button className="modal-close-btn" onClick={closeModal}>×</button>
                         <h2>{selectedTopic.title}</h2>
                         <p>{selectedTopic.fullInfo}</p>
-                        <Link
-                            to={`/article/${selectedTopic.title.toLowerCase()}`}
-                            className="modal-read-more"
-                        >
-                            Читать полную статью
-                        </Link>
                     </div>
                 </div>
             )}
