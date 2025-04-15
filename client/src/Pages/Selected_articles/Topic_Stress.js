@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/Pages/Public_Themes/Topic_Stress.css';
+import '../../Styles/Pages/Selected_articles/Topic_Stress.css';
 
 const Topic_Stress = () => {
     const [showTips, setShowTips] = useState(false);

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../index';
 import '../../Styles/Pages/StartPage/Home.css';
@@ -15,6 +15,40 @@ import user3 from '../../Images/user1.jpeg';
 
 const Home = () => {
     const { user } = useContext(Context);
+    const [selectedTopic, setSelectedTopic] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const popularTopics = [
+        {
+            id: 1,
+            title: "Депрессия",
+            shortInfo: "Как распознать и справиться с депрессией.",
+            fullInfo: "Депрессия — это серьезное психическое расстройство, которое требует внимания и лечения. Основные симптомы включают постоянную грусть, потерю интереса к деятельности, изменения аппетита и сна. В статье рассматриваются современные методы терапии и самопомощи."
+        },
+        {
+            id: 2,
+            title: "Тревожность",
+            shortInfo: "Методы борьбы с тревожными состояниями.",
+            fullInfo: "Тревожные расстройства — одна из самых распространенных проблем психического здоровья. Мы расскажем о когнитивно-поведенческой терапии, техниках релаксации и других эффективных способах снижения тревожности в повседневной жизни."
+        },
+        {
+            id: 3,
+            title: "Самооценка",
+            shortInfo: "Как повысить самооценку и уверенность в себе.",
+            fullInfo: "Здоровая самооценка — основа психологического благополучия. В материале представлены упражнения для развития самопринятия, советы по преодолению самокритики и стратегии формирования устойчивой положительной самооценки."
+        }
+    ];
+
+    const openModal = (topic) => {
+        setSelectedTopic(topic);
+        setIsModalOpen(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        document.body.style.overflow = 'auto';
+    };
 
     return (
         <div className="home">
@@ -69,20 +103,35 @@ const Home = () => {
             <section className="popular-topics">
                 <h2>Популярные темы</h2>
                 <div className="topics-list">
-                    <div className="topic-card">
-                        <h3>Депрессия</h3>
-                        <p>Как распознать и справиться с депрессией.</p>
-                    </div>
-                    <div className="topic-card">
-                        <h3>Тревожность</h3>
-                        <p>Методы борьбы с тревожными состояниями.</p>
-                    </div>
-                    <div className="topic-card">
-                        <h3>Самооценка</h3>
-                        <p>Как повысить самооценку и уверенность в себе.</p>
-                    </div>
+                    {popularTopics.map(topic => (
+                        <div
+                            key={topic.id}
+                            className="topic-card"
+                            onClick={() => openModal(topic)}
+                        >
+                            <h3>{topic.title}</h3>
+                            <p>{topic.shortInfo}</p>
+                            <button className="read-more-btn">Узнать больше</button>
+                        </div>
+                    ))}
                 </div>
             </section>
+
+            {isModalOpen && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close-btn" onClick={closeModal}>×</button>
+                        <h2>{selectedTopic.title}</h2>
+                        <p>{selectedTopic.fullInfo}</p>
+                        <Link
+                            to={`/article/${selectedTopic.title.toLowerCase()}`}
+                            className="modal-read-more"
+                        >
+                            Читать полную статью
+                        </Link>
+                    </div>
+                </div>
+            )}
 
             <section
                 className="quotes-section"

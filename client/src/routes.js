@@ -20,9 +20,9 @@ import CourseOne from './Pages/Courses/CourseOne';
 import News from './Pages/News/News';
 import Discussions from "./Pages/Discussions/DIscussions";
 import DiscussionsOne from "./Pages/Discussions/DiscussionsOne";
-import Topic_Stress from "./Pages/Public_Themes/Topic_Stress";
-import EmotionalIntelligence from "./Pages/Public_Themes/EmotionalIntelligence";
-import mentalHealth from "./Pages/Public_Themes/MentalHealth";
+import Topic_Stress from "./Pages/Selected_articles/Topic_Stress";
+import EmotionalIntelligence from "./Pages/Selected_articles/EmotionalIntelligence";
+import mentalHealth from "./Pages/Selected_articles/MentalHealth";
 
 export const authRoutes = [
     {

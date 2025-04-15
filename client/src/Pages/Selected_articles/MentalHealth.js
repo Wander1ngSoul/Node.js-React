@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/Pages/Public_Themes/MentalHealth.css';
+import '../../Styles/Pages/Selected_articles/MentalHealth.css';
 
 const MentalHealth = () => {
     const [showTips, setShowTips] = useState(false);

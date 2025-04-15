@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - DB_SERVER=mssql
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DB_PORT=1433
+    depends_on:
+      - mssql
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+
+  client:
+    build: ./client
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "${DB_PASSWORD}"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    healthcheck:
+      test: [ "CMD", "/opt/mssql-tools/bin/sqlcmd", "-U", "sa", "-P", "${DB_PASSWORD}", "-Q", "SELECT 1" ]
+      interval: 10s
+      retries: 10
+
+volumes:
+  mssql_data:

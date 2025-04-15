@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/Pages/Public_Themes/EmotionalIntelligence.css';
+import '../../Styles/Pages/Selected_articles/EmotionalIntelligence.css';
 
 const EmotionalIntelligence = () => {
     const [showTips, setShowTips] = useState(false);
