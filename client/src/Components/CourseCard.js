@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './Styles/CourseCard.css';
+import '../Styles/Components/CourseCard.css';
 import { COURSE_ROUTE } from "../utils/consts";
 import { Context } from '../index';
 import { addToCard, deleteFromCard, fetchCart } from "../Services/cartService";

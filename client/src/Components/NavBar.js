@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Context } from "../index";
 import { HOME_ROUTE, LOGIN_ROUTE } from "../utils/consts";
 import { Link, useNavigate } from "react-router-dom";
-import './Styles/NavBar.css';
+import '../Styles/Components/NavBar.css';
 import { observer } from "mobx-react-lite";
 
 const NavBar = observer(() => {
