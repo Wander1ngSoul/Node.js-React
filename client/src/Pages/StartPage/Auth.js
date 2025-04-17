@@ -31,8 +31,10 @@ const Auth = () => {
         if (!isLogin && !formData.username.trim()) newErrors.username = 'Имя пользователя обязательно';
         if (!isLogin && !formData.email.trim()) newErrors.email = 'Email обязателен';
         if (!isLogin && !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Некорректный формат email';
+        if (formData.email.length > 30) newErrors.email = 'Email должен быть не более 30 символов';
         if (!formData.password.trim()) newErrors.password = 'Пароль обязателен';
         if (formData.password.length < 8) newErrors.password = 'Пароль должен быть не менее 8 символов';
+        if (formData.password.length > 15) newErrors.password = 'Пароль должен быть не более 15 символов';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -40,6 +42,11 @@ const Auth = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+
+        // Ограничение длины для email и password
+        if (name === 'email' && value.length > 30) return;
+        if (name === 'password' && value.length > 15) return;
+
         setFormData(prev => ({ ...prev, [name]: value }));
         if (errors[name]) {
             setErrors(prev => ({ ...prev, [name]: '' }));
@@ -129,6 +136,7 @@ const Auth = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
+                            maxLength={30}
                         />
                         {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                     </Form.Group>
@@ -141,6 +149,7 @@ const Auth = () => {
                             name="password"
                             value={formData.password}
                             onChange={handleChange}
+                            maxLength={15}
                         />
                         {errors.password && <div className="invalid-feedback">{errors.password}</div>}
                     </Form.Group>

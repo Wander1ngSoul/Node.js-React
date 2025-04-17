@@ -23,3 +23,4 @@ export const EDIT_COURSE_ROUTE = '/edit-course';
 export const STRESS_PAGE_ROUTE = '/article/stress-management';
 export const EMOTIONALINTELLIGENCE_ROUTE = '/article/emotional-intelligence';
 export const SLEEPANDMENTALHEALTH_ROUTE ='/article/sleep-and-mental-health'
+export const PAY_COURSE_ROUTE = '/pay-course';

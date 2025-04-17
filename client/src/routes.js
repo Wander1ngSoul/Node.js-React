@@ -9,7 +9,8 @@ import {
     DISCUSSIONS_ROUTE,
     STRESS_PAGE_ROUTE,
     EMOTIONALINTELLIGENCE_ROUTE,
-    SLEEPANDMENTALHEALTH_ROUTE
+    SLEEPANDMENTALHEALTH_ROUTE,
+    PAY_COURSE_ROUTE
 } from "./utils/consts";
 
 import Admin from './Pages/StartPage/Admin';
@@ -23,6 +24,7 @@ import DiscussionsOne from "./Pages/Discussions/DiscussionsOne";
 import Topic_Stress from "./Pages/Selected_articles/Topic_Stress";
 import EmotionalIntelligence from "./Pages/Selected_articles/EmotionalIntelligence";
 import mentalHealth from "./Pages/Selected_articles/MentalHealth";
+import CoursePayPage from "./Pages/Courses/CoursePayPage";
 
 export const authRoutes = [
     {
@@ -33,6 +35,11 @@ export const authRoutes = [
         path: CART_ROUTE + '/:userID',
         Component: Cart
     },
+    {
+        path: PAY_COURSE_ROUTE,
+        Component:CoursePayPage
+
+    }
 ];
 
 export const publicRoutes = [

@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import '../Styles/Components/CourseCard.css';
-import { COURSE_ROUTE } from "../utils/consts";
+import { COURSE_ROUTE, PAY_COURSE_ROUTE } from "../utils/consts";
 import { Context } from '../index';
 import { addToCard, deleteFromCard, fetchCart } from "../Services/cartService";
 
@@ -31,12 +31,12 @@ const CourseCard = ({ course, onDelete }) => {
         e.stopPropagation();
         try {
             if (user.isAuth) {
-                alert(`Курс "${course.CourseName}" куплен!`);
+                navigate(PAY_COURSE_ROUTE, { state: { course } });
             } else {
                 alert("Необходимо пройти авторизацию!");
             }
         } catch (error) {
-            console.log("Ошибка при покупке курса: ", error);
+            console.log("Ошибка при переходе к оплате: ", error);
         }
     };
 
@@ -82,7 +82,7 @@ const CourseCard = ({ course, onDelete }) => {
     const handleDelete = async (e) => {
         e.stopPropagation();
         try {
-            await onDelete(course.CourseID); // Вызываем onDelete, переданный из компонента Courses
+            await onDelete(course.CourseID);
             alert('Курс успешно удален');
         } catch (error) {
             console.error('Ошибка при удалении курса:', error);
