@@ -9,9 +9,9 @@
     import aboutUsImage from '../../Images/Fon-TopBar.avif';
     import aboutUsBottom from '../../Images/AboutAtUs.avif';
     import quoteImage from '../../Images/Photo4.avif';
-    import user1 from '../../Images/user1.jpeg';
-    import user2 from '../../Images/user1.jpeg';
-    import user3 from '../../Images/user1.jpeg';
+    import user1 from '../../Images/women(comment).jpg';
+    import user2 from '../../Images/men(comment).jpeg';
+    import user3 from '../../Images/women(comment)2.avif';
 
     const Home = () => {
         const { user } = useContext(Context);
