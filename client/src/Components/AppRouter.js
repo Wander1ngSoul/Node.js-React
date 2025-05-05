@@ -22,7 +22,7 @@ import News from '../Pages/News/News';
 import CreateEditNews from '../Pages/News/Edit-News';
 import Discussions from '../Pages/Discussions/DIscussions';
 import CreateEditDiscussion from '../Pages/Discussions/EditDiscussion';
-import EditCourse from '../Pages/Courses/Edit-Course'; // Импортируйте компонент для редактирования курса
+import EditCourse from '../Pages/Courses/Edit-Course';
 import CreateCourse from '../Pages/Discussions/CreateCourse'
 
 const AppRouter = () => {

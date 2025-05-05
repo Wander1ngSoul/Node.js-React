@@ -2,11 +2,11 @@ FROM node
 
 COPY package*.json ./
 RUN npm install
-COPY ../client .
+COPY . .
 
-RUN npm run build
-
-RUN apk add --no-cache python3 make g++
+RUN apt-get update && \
+    apt-get install -y python3 make g++ && \
+    rm -rf /var/lib/apt/lists/*
 
 EXPOSE 5000
 

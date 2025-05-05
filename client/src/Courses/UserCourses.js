@@ -15,6 +15,18 @@ export default class UserStore {
         this._user = user;
     }
 
+    checkAuth() {
+        const token = localStorage.getItem('token');
+        if (token) {
+            this._isAuth = true;
+            this._user = {
+                username: localStorage.getItem('username'),
+                userID: localStorage.getItem('userID'),
+                roleID: localStorage.getItem('roleID')
+            };
+        }
+    }
+
     get isAuth() {
         return this._isAuth;
     }
