@@ -11,13 +11,13 @@ const EmotionalIntelligence = () => {
     };
 
     return (
-        <div className="emotional-page">
-            <header className="emotional-header">
+        <div className="ei-page">
+            <header className="ei-header">
                 <h1>Развитие эмоционального интеллекта</h1>
                 <p>Узнайте, как управлять своими эмоциями и лучше понимать других</p>
             </header>
 
-            <section className="emotional-test">
+            <section className="ei-test">
                 <h2>Пройдите мини-тест</h2>
                 <p>Насколько вы осознаёте свои эмоции?</p>
                 <div className="test-options">
@@ -35,10 +35,10 @@ const EmotionalIntelligence = () => {
                 )}
             </section>
 
-            <section className="emotional-tips">
-                <h2>Полезные советы</h2>
+            <section className="ei-tips">
+                <h2>Полезные техники</h2>
                 <button className="toggle-btn" onClick={() => setShowTips(!showTips)}>
-                    {showTips ? 'Скрыть советы' : 'Показать советы'}
+                    {showTips ? 'Скрыть техники' : 'Показать техники'}
                 </button>
                 {showTips && (
                     <ul className="tips-list">
@@ -52,7 +52,7 @@ const EmotionalIntelligence = () => {
                 )}
             </section>
 
-            <footer className="emotional-footer">
+            <footer className="ei-footer">
                 <Link to="/" className="back-link">← Назад на главную</Link>
             </footer>
         </div>

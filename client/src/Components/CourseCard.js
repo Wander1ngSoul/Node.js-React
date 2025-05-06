@@ -27,6 +27,10 @@ const CourseCard = ({ course, onDelete }) => {
         checkIfCourseIsInCart();
     }, [user.isAuth, user.user.userID, course.CourseID]);
 
+    const handleCourseClick = () => {
+        navigate(`${COURSE_ROUTE}/${course.CourseID}`);
+    };
+
     const handleBuy = (e) => {
         e.stopPropagation();
         try {
@@ -90,20 +94,21 @@ const CourseCard = ({ course, onDelete }) => {
     };
 
     return (
-        <Card
-            className="course-card"
-            onClick={() => navigate(`${COURSE_ROUTE}/${course.CourseID}`)}
-            style={{ cursor: 'pointer' }}
-        >
+        <Card className="course-card">
             <Card.Body>
-                <Card.Title className="card-title">{course.CourseName}</Card.Title>
-                <Card.Text className="card-description">
-                    {course.Description}
-                </Card.Text>
-                <Card.Text className="price-text">
-                    Цена: {course.Price} руб.
-                </Card.Text>
-                <div className="button-container" onClick={(e) => e.stopPropagation()}>
+                {/* Кликабельная область только для названия и описания */}
+                <div onClick={handleCourseClick} style={{ cursor: 'pointer' }}>
+                    <Card.Title className="card-title">{course.CourseName}</Card.Title>
+                    <Card.Text className="card-description">
+                        {course.Description}
+                    </Card.Text>
+                    <Card.Text className="price-text">
+                        Цена: {course.Price} руб.
+                    </Card.Text>
+                </div>
+
+                {/* Кнопки - здесь клик не приводит к переходу на страницу курса */}
+                <div className="button-container">
                     <Button className="Btn-Pay" onClick={handleBuy}>
                         Купить
                     </Button>

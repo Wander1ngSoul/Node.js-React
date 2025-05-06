@@ -1,86 +1,132 @@
-.emotional-page {
+/* EmotionalIntelligence.css */
+.ei-page {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom, #f7f9fc, #e6ecf3);
-    color: #2c3e50;
     padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #f9fbfd;
+    color: #333;
 }
 
-.emotional-header {
+.ei-header {
     text-align: center;
+    background: linear-gradient(to right, #8E2DE2, #4A00E0);
+    padding: 40px 20px;
+    border-radius: 16px;
     margin-bottom: 30px;
+    color: #fff;
 }
 
-.emotional-header h1 {
-    font-size: 2em;
+.ei-header h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #34495e;
 }
 
-.emotional-header p {
-    font-size: 1.2em;
-    color: #566573;
+.ei-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
-.emotional-test,
-.emotional-tips {
-    background: #ffffff;
+.ei-test, .ei-tips {
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border: 1px solid #dde6f0;
     border-radius: 12px;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(74, 0, 224, 0.1);
+}
+
+.ei-test h2, .ei-tips h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #4A00E0;
 }
 
 .test-options {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-.test-options button,
-.toggle-btn {
-    background-color: #3498db;
-    color: white;
+.test-options button {
+    padding: 10px 20px;
+    font-size: 1rem;
     border: none;
-    padding: 12px;
     border-radius: 8px;
+    background-color: #8E2DE2;
+    color: #fff;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.test-options button:hover,
-.toggle-btn:hover {
-    background-color: #2980b9;
+.test-options button:hover {
+    background-color: #7B1FA2;
 }
 
 .test-result {
     margin-top: 20px;
-    background: #ecf0f1;
+    background-color: #f3e5ff;
     padding: 15px;
+    border-left: 5px solid #8E2DE2;
     border-radius: 8px;
-    color: #2c3e50;
+    color: #333;
+}
+
+.toggle-btn {
+    background-color: #4A00E0;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #3A00B0;
 }
 
 .tips-list {
-    margin-top: 15px;
     list-style-type: disc;
+    margin-top: 15px;
     padding-left: 20px;
-    color: #2e4053;
+    color: #444;
+    line-height: 1.6;
 }
 
-.emotional-footer {
-    margin-top: 30px;
+.tips-list li {
+    margin-bottom: 8px;
+}
+
+.ei-footer {
     text-align: center;
+    margin-top: 40px;
 }
 
 .back-link {
-    color: #2980b9;
+    color: #6d7ea7;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .back-link:hover {
-    color: #1c5d99;
+    color: #4A00E0;
+}
+
+@media (max-width: 600px) {
+    .test-options {
+        flex-direction: column;
+    }
+
+    .test-options button {
+        width: 100%;
+    }
+
+    .ei-header h1 {
+        font-size: 2rem;
+    }
 }

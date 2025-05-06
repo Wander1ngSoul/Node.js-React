@@ -68,65 +68,67 @@ const Discussions = () => {
     }
 
     return (
-        <div className="discussions-container">
-            <Button variant="outline-secondary" onClick={() => navigate(-1)}>Назад</Button>
+        <div className="page-container">
+            <div className="discussions-container">
+                <Button variant="outline-secondary" onClick={() => navigate(-1)}>Назад</Button>
 
-            <h1 className="discussions-title">Обсуждения</h1>
+                <h1 className="discussions-title">Обсуждения</h1>
 
-            {user.user && user.user.roleID === 2 && (
-                <Button
-                    variant="success"
-                    className="create-discussion-button"
-                    onClick={handleCreate}
-                >
-                    Создать обсуждение
-                </Button>
-            )}
+                {user.user && user.user.roleID === 2 && (
+                    <Button
+                        variant="success"
+                        className="create-discussion-button"
+                        onClick={handleCreate}
+                    >
+                        Создать обсуждение
+                    </Button>
+                )}
 
-            <div className="discussions-list">
-                {discussions.length > 0 ? (
-                    discussions.map((discussion) => (
-                        <div key={discussion.DiscussionID} className="discussion-block">
-                            <div className="discussion-item">
-                                <h2 className="discussion-item-title">{discussion.Title}</h2>
-                                <p className="discussion-item-content">{discussion.Content}</p>
-                                <div className="discussion-item-footer">
-                                    <span>Автор: {discussion.CreatedBy || 'Не указан'}</span>
-                                    <span>Дата: {formatDate(discussion.CreatedDate)}</span>
-                                    <div className="buttons-container">
-                                        <Button
-                                            variant="primary"
-                                            className="discussion-button"
-                                            onClick={() => navigate(`/discussions/${discussion.DiscussionID}`)}
-                                        >
-                                            Перейти к обсуждению
-                                        </Button>
-                                        {user.user && user.user.roleID === 2 && (
-                                            <>
-                                                <Button
-                                                    variant="warning"
-                                                    className="edit-button"
-                                                    onClick={() => handleEdit(discussion.DiscussionID)}
-                                                >
-                                                    Редактировать
-                                                </Button>
-                                                <Button
-                                                    variant="danger"
-                                                    className="delete-button"
-                                                    onClick={() => handleDelete(discussion.DiscussionID)}
-                                                >
-                                                    Удалить
-                                                </Button>
-                                            </>
-                                        )}
+                <div className="discussions-list">
+                    {discussions.length > 0 ? (
+                        discussions.map((discussion) => (
+                            <div key={discussion.DiscussionID} className="discussion-block">
+                                <div className="discussion-item">
+                                    <h2 className="discussion-item-title">{discussion.Title}</h2>
+                                    <p className="discussion-item-content">{discussion.Content}</p>
+                                    <div className="discussion-item-footer">
+                                        <span>Автор: {discussion.CreatedBy || 'Не указан'}</span>
+                                        <span>Дата: {formatDate(discussion.CreatedDate)}</span>
+                                        <div className="buttons-container">
+                                            <Button
+                                                variant="primary"
+                                                className="discussion-button"
+                                                onClick={() => navigate(`/discussions/${discussion.DiscussionID}`)}
+                                            >
+                                                Перейти к обсуждению
+                                            </Button>
+                                            {user.user && user.user.roleID === 2 && (
+                                                <>
+                                                    <Button
+                                                        variant="warning"
+                                                        className="edit-button"
+                                                        onClick={() => handleEdit(discussion.DiscussionID)}
+                                                    >
+                                                        Редактировать
+                                                    </Button>
+                                                    <Button
+                                                        variant="danger"
+                                                        className="delete-button"
+                                                        onClick={() => handleDelete(discussion.DiscussionID)}
+                                                    >
+                                                        Удалить
+                                                    </Button>
+                                                </>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))
-                ) : (
-                    <div className="no-discussions">Нет доступных обсуждений.</div>
-                )}
+                        ))
+                    ) : (
+                        <div className="no-discussions">Нет доступных обсуждений.</div>
+                    )}
+                </div>
             </div>
 
             <footer className="footer">
