@@ -76,7 +76,7 @@ const Discussions = () => {
 
                 <h1 className="discussions-title">Обсуждения</h1>
 
-                {user.user && user.user.roleID === 2 && (
+                {user.user && user.user.roleID === 3 && (
                     <Button
                         variant="success"
                         className="create-discussion-button"
