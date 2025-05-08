@@ -1,66 +1,225 @@
+/* Основные стили */
 .pay-page {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
+    padding: 20px;
+    background: #f5f5f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-page-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 25px;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .pay-page h1 {
-    color: #333;
+    color: #2d3748;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.course-price {
+    color: #4a5568;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
+/* Форма оплаты */
 .payment-form {
-    margin-top: 2rem;
-}
-
-.pay-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 1rem;
-}
-
-.pay-button:hover {
-    background-color: #45a049;
-}
-.payment-form {
-    max-width: 400px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
+    margin-top: 1.5rem;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4299e1;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
 }
 
 .form-row {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
 }
 
-input {
-    padding: 8px;
-    font-size: 16px;
+.form-row .form-group {
+    flex: 1;
 }
 
+.expiry-group input {
+    text-align: center;
+}
+
+.cvc-input {
+    position: relative;
+}
+
+.cvc-hint {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: #a0aec0;
+}
+
+.card-number-input {
+    position: relative;
+}
+
+.card-icons {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.card-icon {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.card-icon.visa {
+    background: #1a1f71;
+    color: white;
+}
+
+.card-icon.mastercard {
+    background: #eb001b;
+    color: white;
+}
+
+/* Кнопка оплаты */
+.pay-button {
+    width: 100%;
+    background-color: #4299e1;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.pay-button:hover {
+    background-color: #3182ce;
+}
+
+.pay-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Ошибки и сообщения */
 .error {
-    color: red;
-    font-size: 14px;
+    color: #e53e3e;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
 }
 
-.success {
-    color: green;
-    font-size: 16px;
-    margin-top: 10px;
+.input-error {
+    border-color: #e53e3e !important;
+    background: #fff5f5 !important;
+}
+
+.success-message {
+    margin-top: 1.5rem;
+    padding: 15px;
+    background: #f0fff4;
+    border-radius: 8px;
+    border: 1px solid #c6f6d5;
+    color: #2f855a;
+    text-align: center;
+}
+
+.error-message {
+    padding: 20px;
+    text-align: center;
+    color: #e53e3e;
+    font-size: 1.1rem;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 600px) {
+    .pay-page-container {
+        padding: 20px;
+        margin: 10px auto;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .pay-page h1 {
+        font-size: 1.3rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-row .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-row .form-group:last-child {
+        margin-bottom: 0;
+    }
+
+    .cvc-hint {
+        position: static;
+        display: block;
+        transform: none;
+        margin-top: 0.25rem;
+        text-align: right;
+    }
+
+    .card-icons {
+        right: 10px;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.success-message {
+    animation: fadeIn 0.3s ease-out;
 }

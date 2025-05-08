@@ -69,9 +69,7 @@
                     {user.isAuth && (
                         <>
                             <Link to={`/cart/${user.user.userID}`} className="nav-link">Корзина</Link>
-                            {user.user.roleID === 3 && (
-                                <Link to="/statistics" className="nav-link">Статистика</Link>
-                            )}
+
                         </>
                     )}
                 </nav>

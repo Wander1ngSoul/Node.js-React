@@ -70,7 +70,9 @@ const Discussions = () => {
     return (
         <div className="page-container">
             <div className="discussions-container">
-                <Button variant="outline-secondary" onClick={() => navigate(-1)}>Назад</Button>
+                <Button variant="outline-secondary" className="back-button" onClick={() => navigate(-1)}>
+                    Назад
+                </Button>
 
                 <h1 className="discussions-title">Обсуждения</h1>
 
@@ -92,31 +94,33 @@ const Discussions = () => {
                                     <h2 className="discussion-item-title">{discussion.Title}</h2>
                                     <p className="discussion-item-content">{discussion.Content}</p>
                                     <div className="discussion-item-footer">
-                                        <span>Автор: {discussion.CreatedBy || 'Не указан'}</span>
-                                        <span>Дата: {formatDate(discussion.CreatedDate)}</span>
+                                        <div className="discussion-meta">
+                                            <span className="discussion-author">Автор: {discussion.CreatedBy || 'Не указан'}</span>
+                                            <span className="discussion-date">Дата: {formatDate(discussion.CreatedDate)}</span>
+                                        </div>
                                         <div className="buttons-container">
                                             <Button
                                                 variant="primary"
                                                 className="discussion-button"
                                                 onClick={() => navigate(`/discussions/${discussion.DiscussionID}`)}
                                             >
-                                                Перейти к обсуждению
+                                                Перейти
                                             </Button>
-                                            {user.user && user.user.roleID === 2 && (
+                                            {user.user && user.user.roleID === 3 && (
                                                 <>
                                                     <Button
                                                         variant="warning"
                                                         className="edit-button"
                                                         onClick={() => handleEdit(discussion.DiscussionID)}
                                                     >
-                                                        Редактировать
+                                                        <i className="fas fa-edit"></i>
                                                     </Button>
                                                     <Button
                                                         variant="danger"
                                                         className="delete-button"
                                                         onClick={() => handleDelete(discussion.DiscussionID)}
                                                     >
-                                                        Удалить
+                                                        <i className="fas fa-trash"></i>
                                                     </Button>
                                                 </>
                                             )}
@@ -137,7 +141,7 @@ const Discussions = () => {
                     <div className="footer-links">
                         <Link to="/privacy-policy" className="footer-link">Политика конфиденциальности</Link>
                         <Link to="/terms-of-use" className="footer-link">Условия использования</Link>
-                        <Link to="/contact-us" className="footer-link">Свяжитесь с нами</Link>
+                        <Link to="/contact-us" className="footer-link">Контакты</Link>
                     </div>
                 </div>
             </footer>

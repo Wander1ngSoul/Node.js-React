@@ -12,7 +12,7 @@ const CreateEditDiscussion = () => {
 
     useEffect(() => {
         if (id) {
-            // Если есть ID, загружаем данные обсуждения для редактирования
+
             const loadDiscussion = async () => {
                 try {
                     const discussion = await fetchDiscussionByID(id);
