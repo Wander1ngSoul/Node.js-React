@@ -94,7 +94,8 @@ const Courses = () => {
                         </Form>
                     </Col>
                     <Col xs="auto">
-                        {user?.isAuth && user.user?.RoleID === 2 && (
+                        {console.log(user.user.roleID)}
+                        {user?.isAuth && user.user?.roleID === 3 && (
                             <Button variant="success" onClick={() => navigate('/create-course')}>
                                 Создать курс
                             </Button>
